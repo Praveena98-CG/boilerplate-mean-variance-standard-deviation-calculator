@@ -1,3 +1,4 @@
+
 import numpy as np
 
 
@@ -16,12 +17,15 @@ def calculate(list):
         'sum': np.sum
     }
     
-    results = {}
+
+    Calculations = {}
     for name, func in functions.items():
-        results[name] = [
+        Calculations[name] = [
+
             func(arr, axis=0).tolist(),
             func(arr, axis=1).tolist(),
             func(arr).tolist()
         ]
-    
-    return results
+
+    return calculations
+ 
